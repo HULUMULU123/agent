@@ -1,0 +1,192 @@
+{
+"overall_observation": "Высокий объём транзакций с редкими частотами и крупными суммами требует внимания.",
+"transactions": [
+{
+"id": 1,
+"purpose": "Разовый приход: оплата по счёту №82681, основание: компенсация затрат по акту",
+"risk_label": "желтый",
+"risk_score": 0.39,
+"flags": ["amount_anomaly_moderate", "round_large_amount"],
+"primary_reasons": [
+"ml_metric=0.69 (средний)",
+"крупная сумма зачисления 795177.12"
+],
+"evidence": {
+"ml_metric": 0.69,
+"anomaly_amount": false,
+"amount": 795177.12,
+"chain_match": null
+},
+"recommendation": "Проверить документальное подтверждение прихода; мониторинг транзакции",
+"risk_explanation": "Средний уровень риска. Платёж крупный, но без явных аномалий по сумме и назначению; ML-оценка 0.69."
+},
+{
+"id": 2,
+"purpose": "Оплата по договору на поставку №8739, оплата по счету №38946 от 01.08.2025",
+"risk_label": "желтый",
+"risk_score": 0.44,
+"flags": ["freq_anomaly_strong", "amount_anomaly_moderate"],
+"primary_reasons": [
+"ml_metric=1.0 (средний)",
+"аномалия по частоте транзакций (anomaly_frequency=true)"
+],
+"evidence": {
+"ml_metric": 1.0,
+"anomaly_amount": false,
+"amount": 684856.08,
+"chain_match": null
+},
+"recommendation": "Проверить регулярность поставок и документацию; отслеживать повторные операции",
+"risk_explanation": "Средний уровень риска. Зафиксировано отклонение частоты транзакций и крупная сумма; ML-оценка 1.0 указывает на умеренную настороженность."
+},
+{
+"id": 3,
+"purpose": "Оплата услуг по договору №US-2030 (Предоставление услуг), акт №92344",
+"risk_label": "зеленый",
+"risk_score": 0.21,
+"flags": ["freq_anomaly_strong"],
+"primary_reasons": [
+"ml_metric=1.59 (низкий риск)",
+"аномалия по частоте транзакций (anomaly_frequency=true)"
+],
+"evidence": {
+"ml_metric": 1.59,
+"anomaly_amount": false,
+"amount": 1406909.58,
+"chain_match": null
+},
+"recommendation": "Архивация и отслеживание при необходимости",
+"risk_explanation": "Низкий уровень риска. Платёж крупный, но без существенных аномалий суммы и назначения; частотная аномалия незначительна на фоне низкой ML-оценки (1.59)."
+},
+{
+"id": 4,
+"purpose": "Разовый перевод, основание: возврат аванса",
+"risk_label": "желтый",
+"risk_score": 0.36,
+"flags": [],
+"primary_reasons": [
+"ml_metric=1.18 (средний)"
+],
+"evidence": {
+"ml_metric": 1.18,
+"anomaly_amount": false,
+"amount": 45846.81,
+"chain_match": null
+},
+"recommendation": "Проверить основания перевода; при необходимости запросить подтверждающие документы",
+"risk_explanation": "Средний уровень риска. Разовый возврат аванса с умеренной ML-оценкой (1.18), без явных аномалий."
+},
+{
+"id": 5,
+"purpose": "Выплата заработной платы за августа 2025 по ведомости №5868",
+"risk_label": "желтый",
+"risk_score": 0.39,
+"flags": ["amount_anomaly_moderate", "round_large_amount"],
+"primary_reasons": [
+"ml_metric=0.69 (средний)",
+"крупная сумма списания 867601.35"
+],
+"evidence": {
+"ml_metric": 0.69,
+"anomaly_amount": false,
+"amount": 867601.35,
+"chain_match": null
+},
+"recommendation": "Проверить ведомость и расчёт зарплаты; отслеживать регулярность выплат",
+"risk_explanation": "Средний уровень риска. Платёж крупный, типичный по назначению (зарплата), ML-оценка 0.69."
+},
+{
+"id": 6,
+"purpose": "Оплата услуг по договору №US-7146 от 03.08.2025, акт №97610 от 25.07.2025",
+"risk_label": "зеленый",
+"risk_score": 0.21,
+"flags": [],
+"primary_reasons": [
+"ml_metric=1.59 (низкий риск)"
+],
+"evidence": {
+"ml_metric": 1.59,
+"anomaly_amount": false,
+"amount": 117518.63,
+"chain_match": null
+},
+"recommendation": "Архивация платежа; при необходимости мониторинг",
+"risk_explanation": "Низкий уровень риска. Платёж типичный, ML-оценка высокая (1.59), без признаков аномалий."
+},
+{
+"id": 7,
+"purpose": "Оплата услуг по договору №US-2709 от 05.08.2025, акт №96154 от 26.07.2025",
+"risk_label": "зеленый",
+"risk_score": 0.22,
+"flags": [],
+"primary_reasons": [
+"ml_metric=1.56 (низкий риск)"
+],
+"evidence": {
+"ml_metric": 1.56,
+"anomaly_amount": false,
+"amount": 1103610.35,
+"chain_match": null
+},
+"recommendation": "Архивация; мониторинг при необходимости",
+"risk_explanation": "Низкий уровень риска. Платёж крупный, но без аномалий по сумме и назначению, ML-оценка 1.56."
+},
+{
+"id": 8,
+"purpose": "Разовый перевод, основание: проведение расчетов по накладной",
+"risk_label": "желтый",
+"risk_score": 0.39,
+"flags": ["amount_anomaly_moderate", "round_large_amount"],
+"primary_reasons": [
+"ml_metric=0.69 (средний)",
+"крупная сумма списания 177946.81"
+],
+"evidence": {
+"ml_metric": 0.69,
+"anomaly_amount": false,
+"amount": 177946.81,
+"chain_match": null
+},
+"recommendation": "Проверить документы по накладной; мониторинг транзакции",
+"risk_explanation": "Средний уровень риска. Платёж крупный, но без явных аномалий суммы и назначения; ML-оценка 0.69."
+},
+{
+"id": 9,
+"purpose": "Разовый перевод, основание: корректировка по бухгалтерской ошибке",
+"risk_label": "желтый",
+"risk_score": 0.39,
+"flags": ["amount_anomaly_moderate", "round_large_amount"],
+"primary_reasons": [
+"ml_metric=0.69 (средний)",
+"крупная сумма списания 704500.07"
+],
+"evidence": {
+"ml_metric": 0.69,
+"anomaly_amount": false,
+"amount": 704500.07,
+"chain_match": null
+},
+"recommendation": "Проверить корректировку бухгалтерии; мониторинг операции",
+"risk_explanation": "Средний уровень риска. Платёж крупный, но без явных аномалий; ML-оценка 0.69."
+},
+{
+"id": 10,
+"purpose": "Оплата по договору поставки №1744 от 09.08.2025, счет №10714 от 01.08.2025, без НДС",
+"risk_label": "желтый",
+"risk_score": 0.44,
+"flags": ["freq_anomaly_strong"],
+"primary_reasons": [
+"ml_metric=1.0 (средний)",
+"аномалия по частоте транзакций (anomaly_frequency=true)"
+],
+"evidence": {
+"ml_metric": 1.0,
+"anomaly_amount": false,
+"amount": 483353.71,
+"chain_match": null
+},
+"recommendation": "Проверить регулярность оплаты поставщикам; отслеживать повторные операции",
+"risk_explanation": "Средний уровень риска. Зафиксировано отклонение частоты транзакций, сумма крупная, ML-оценка 1.0."
+}
+]
+}
